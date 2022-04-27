@@ -1,0 +1,14 @@
+#mensajes{
+    background-color: rgb(210, 255, 237);
+    padding-left: 5px;
+    width: auto;
+    height: 300px;
+    overflow: scroll;
+}
+#usuarios{
+    background-color: #ccc;
+    padding-left: 5px;
+    width: 350px;
+    height: 500px;
+    overflow: scroll;
+}

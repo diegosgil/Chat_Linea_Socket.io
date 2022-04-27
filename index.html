@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+            <script src="http://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+            <script src="http://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <script src="/socket.io/socket.io.js"></script>
+            <script src="https://unpkg.com/vue@3"></script>
+            <link rel="stylesheet" href="css/estilo.css">
+    </head>
+    <body>
+        <div class="container"  id="app">
+            <div class="row">
+                <div class="col">
+                    <h1>Chat</h1>
+                    <p>Nombre:
+                    {{nickName}}
+                    <p>Correo:
+                    {{correo}}
+                    <p>User name:
+                    {{userName}}
+                    <p> 
+                    <div id="mensajes">
+                    <br>
+                    <ul>
+                        <li v-for="mensaje in listaMensajes">{{mensaje}}</li>
+                    </ul>
+                    </div>
+                    <textarea type="text" id="mensaje" v-model="mensajeText" placeholder="Escribe un mensaje" class="form-control" cols="2" rows="1"></textarea>
+                     
+                    <hr>
+                    <button @click="enviarMensaje" class="btn btn-success">Enviar</button>
+                </div>
+            <div class="col">
+                <h1>Usuarios en linea:</h1>
+                <div id="usuarios">
+                    <ul>
+                        <li v-for="usuario in listaUsuarios">{{usuario}}</li>
+                    </ul>
+                    
+                </div>
+                
+            </div>
+
+                <div class="col">
+
+                </div>
+            </div>
+
+        </div>
+        
+        <script src="js/indexVue.js"></script>
+
+
+    </body>
+</html>
